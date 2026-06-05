@@ -1,0 +1,1 @@
+import{r as t,d as n,h as l}from"./index-CQcxCP0p.js";function f(){const[u,e]=t.useState(null),[r,s]=t.useState(!0);return t.useEffect(()=>{if(!n.getToken()){e(null),s(!1);return}l().then(a=>{e(a.user??null)}).catch(()=>{n.clearToken(),e(null)}).finally(()=>{s(!1)})},[]),{user:u,loading:r}}export{f as u};
