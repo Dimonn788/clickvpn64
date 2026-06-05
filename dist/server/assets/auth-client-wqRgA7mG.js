@@ -1,0 +1,18 @@
+const AUTH_TOKEN_KEY = "auth_token";
+const authClient = {
+  getToken: () => {
+    if (typeof window === "undefined") return null;
+    return window.localStorage.getItem(AUTH_TOKEN_KEY);
+  },
+  setToken: (token) => {
+    if (typeof window === "undefined") return;
+    window.localStorage.setItem(AUTH_TOKEN_KEY, token);
+  },
+  clearToken: () => {
+    if (typeof window === "undefined") return;
+    window.localStorage.removeItem(AUTH_TOKEN_KEY);
+  }
+};
+export {
+  authClient as a
+};
